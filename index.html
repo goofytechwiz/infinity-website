@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create the Impossible</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at 50% 35%, #16245c 0%, #080d25 30%, #02030a 65%, #000 100%);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 7%; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; }
+    .hero {
+      min-height: 82vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center; padding: 40px 20px;
+    }
+    .core {
+      width: 130px; height: 130px; margin-bottom: 35px; border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 0%, #72d9ff 18%, #5665ff 42%, #7b2cff 65%, transparent 70%);
+      box-shadow: 0 0 30px #59c7ff, 0 0 70px #554cff, 0 0 120px #7028ff;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+    h1 { font-size: clamp(2.5rem, 10vw, 6rem); letter-spacing: 4px; line-height: 1; margin-bottom: 22px; }
+    .tagline { color: #9fcfff; font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; }
+    .intro { max-width: 700px; color: #b8bfd3; font-size: 1.05rem; line-height: 1.7; }
+    .projects { padding: 80px 7%; max-width: 1200px; margin: auto; }
+    .projects h2 { text-align: center; font-size: 2rem; margin-bottom: 45px; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+    .project {
+      padding: 30px; min-height: 200px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(130,160,255,0.22); border-radius: 18px; backdrop-filter: blur(10px);
+    }
+    .project h3 { margin-bottom: 15px; color: #b7caff; }
+    .project p { color: #9ca5bb; line-height: 1.6; }
+    footer { text-align: center; padding: 45px 20px; color: #697087; border-top: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">INFINITY</div>
+    <div>CREATE THE IMPOSSIBLE</div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="core"></div>
+      <p class="tagline">Imagine • Create • Build</p>
+      <h1>CREATE THE<br>IMPOSSIBLE</h1>
+      <p class="intro">
+        One universe for games, artificial intelligence, software,
+        movies, worlds, and creations that haven't existed before.
+      </p>
+    </section>
+    <section class="projects">
+      <h2>Explore the Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3>Infinity Vision AI</h3>
+          <p>An AI-powered creative platform built to turn imagination into images, stories, music, video, games, and worlds.</p>
+        </div>
+        <div class="project">
+          <h3>Escape From the Nightmare Forge</h3>
+          <p>A cinematic horror experience where survival means facing what waits inside the Nightmare Forge.</p>
+        </div>
+        <div class="project">
+          <h3>Infinity Motion Studio</h3>
+          <p>A next-generation movie and video creation experience designed to push beyond traditional editing.</p>
+        </div>
+        <div class="project">
+          <h3>Coming Soon</h3>
+          <p>New games, software, films, experiments, and impossible ideas are waiting to be created.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Create the Impossible.</footer>
+</body>
+</html>

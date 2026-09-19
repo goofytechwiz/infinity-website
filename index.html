@@ -642,7 +642,7 @@
         <!-- KAEVORYN CORE -->
         <div class="core-wrap" aria-label="Kaevoryn Core">
           <div class="core-ring"></div>
-          <div class="core"></div>
+          <div class="core" onclick="revealGoldenInvitation()"></div>
         </div>
 
       </div>
@@ -803,6 +803,19 @@ function revealGoldenTicket() {
     </p>
   `;
 }
+}
+
+function revealGoldenInvitation() {
+  const golden = document.getElementById("golden");
+
+  golden.style.display = "block";
+
+  golden.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
 </script>
 
 </body>

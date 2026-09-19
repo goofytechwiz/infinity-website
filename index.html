@@ -422,7 +422,127 @@
       font-size: 1.05rem;
       line-height: 1.8;
     }
+/* ---------- GOLDEN INVITATION ---------- */
 
+#golden {
+  position: relative;
+  padding: 110px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.golden-wrap {
+  max-width: 900px;
+  margin: 45px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.golden-ticket {
+  position: relative;
+  width: min(620px, 90vw);
+  min-height: 190px;
+  padding: 35px 45px;
+  border: 1px solid rgba(255, 215, 90, 0.8);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 225, 110, 0.25), transparent 55%),
+    linear-gradient(135deg, #17120a, #30230b 45%, #120f09);
+  color: #fff4bd;
+  box-shadow:
+    0 0 25px rgba(255, 205, 70, 0.25),
+    0 0 80px rgba(255, 190, 40, 0.12),
+    inset 0 0 35px rgba(255, 220, 100, 0.08);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.golden-ticket:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 0 35px rgba(255, 220, 90, 0.45),
+    0 0 100px rgba(255, 190, 40, 0.2),
+    inset 0 0 45px rgba(255, 220, 100, 0.12);
+}
+
+.golden-ticket::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(255, 224, 120, 0.5);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.golden-ticket::after {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 35%;
+  height: 260%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(25deg);
+  transition: left 0.7s ease;
+}
+
+.golden-ticket:hover::after {
+  left: 110%;
+}
+
+.golden-ticket-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  margin-bottom: 18px;
+  color: #ffe58a;
+}
+
+.golden-ticket strong {
+  display: block;
+  font-size: clamp(1.6rem, 4vw, 2.7rem);
+  letter-spacing: 0.12em;
+  color: #fff1a8;
+  text-shadow: 0 0 18px rgba(255, 215, 90, 0.45);
+}
+
+.golden-ticket span:last-child {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  color: rgba(255, 240, 180, 0.75);
+}
+
+.golden-message {
+  max-width: 620px;
+  min-height: 80px;
+  padding: 22px;
+  opacity: 0.55;
+  color: rgba(255, 245, 200, 0.7);
+  transition: all 0.5s ease;
+}
+
+.golden-message.revealed {
+  opacity: 1;
+  color: #fff1ad;
+  text-shadow: 0 0 18px rgba(255, 215, 90, 0.4);
+}
+
+.golden-message strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+}
+
+.golden-message p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.72);
+}
     /* ---------- FOOTER ---------- */
 
     footer {
@@ -591,6 +711,29 @@
 
       </div>
     </section>
+<!-- GOLDEN INVITATION -->
+<section id="golden">
+  <div class="section-title">
+    <span>A SECRET AWAITS</span>
+    <h2>The Golden Invitation.</h2>
+    <p>
+      Somewhere within Kaevoryn, an invitation may be waiting
+      for the dreamer who finds it.
+    </p>
+  </div>
+
+  <div class="golden-wrap">
+    <button class="golden-ticket" type="button" onclick="revealGoldenTicket()">
+      <span class="golden-ticket-label">KAEVORYN STUDIOS</span>
+      <strong>GOLDEN INVITATION</strong>
+      <span>ACCESS TO THE IMPOSSIBLE</span>
+    </button>
+
+    <div id="golden-message" class="golden-message" aria-live="polite">
+      <span>Something is waiting...</span>
+    </div>
+  </div>
+</section>
 
     <!-- VISION -->
     <section id="vision">

@@ -790,6 +790,7 @@ pointer-events: auto;
     CREATE THE IMPOSSIBLE.
   </footer>
 <script>
+<script>
 function revealGoldenTicket() {
   const message = document.getElementById("golden-message");
 
@@ -805,22 +806,8 @@ function revealGoldenTicket() {
     </p>
   `;
 }
-
-function revealGoldenTicket() {
-  const message = document.getElementById("golden-message");
-
-  message.classList.add("revealed");
-
-  message.innerHTML = `
-    <span>INVITATION DETECTED.</span>
-    <strong>WELCOME, GOLDEN DREAMER.</strong>
-    <p>
-      You have discovered something not meant for everyone.
-      Early access to selected Kaevoryn spectacles, worlds,
-      music, and future creations awaits.
-    </p>
-  `;
-}
+function revealGoldenInvitation() {
+  const golden = document.getElementById("golden");
 
   golden.style.display = "block";
 
@@ -829,6 +816,7 @@ function revealGoldenTicket() {
     block: "center"
   });
 }
+
 
 </script>
 

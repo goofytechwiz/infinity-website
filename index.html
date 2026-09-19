@@ -808,7 +808,16 @@ function revealGoldenTicket() {
 
 
 function revealGoldenInvitation() {
-  alert("CORE CLICKED!");
+  alert("THE CORE HAS AWAKENED!");
+
+  const golden = document.getElementById("golden");
+
+  golden.style.display = "block";
+
+  golden.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
 
   golden.style.display = "block";

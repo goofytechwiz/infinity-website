@@ -806,16 +806,20 @@ function revealGoldenTicket() {
   `;
 }
 
+function revealGoldenTicket() {
+  const message = document.getElementById("golden-message");
 
-function revealGoldenInvitation() {
-  const golden = document.getElementById("golden");
+  message.classList.add("revealed");
 
-  golden.style.display = "block";
-
-  golden.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
+  message.innerHTML = `
+    <span>INVITATION DETECTED.</span>
+    <strong>WELCOME, GOLDEN DREAMER.</strong>
+    <p>
+      You have discovered something not meant for everyone.
+      Early access to selected Kaevoryn spectacles, worlds,
+      music, and future creations awaits.
+    </p>
+  `;
 }
 
   golden.style.display = "block";

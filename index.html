@@ -605,7 +605,41 @@ pointer-events: auto;
     opacity: 0;
   }
 }
-    /* ---------- FOOTER ---------- */
+ /* ---------- GOLDEN SPARKLES ---------- */
+
+.golden-wrap.awaken::after {
+  content: "✦  ✧  ✦  ✧  ✦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  color: #fff1a8;
+  text-shadow:
+    0 0 8px #ffd95a,
+    0 0 20px rgba(255, 215, 90, 0.8),
+    0 0 40px rgba(255, 190, 40, 0.5);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: goldenSparkles 1.4s ease-out forwards;
+}
+
+@keyframes goldenSparkles {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.4);
+  }
+}   /* ---------- FOOTER ---------- */
 
     footer {
       padding: 50px 6%;
@@ -892,6 +926,6 @@ function revealGoldenInvitation() {
 
 
 
-</body>
+
 </body>
 </html>

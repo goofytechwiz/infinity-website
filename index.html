@@ -445,22 +445,63 @@ pointer-events: auto;
 
 .golden-ticket {
   position: relative;
-  width: min(620px, 90vw);
-  min-height: 190px;
-  padding: 35px 45px;
-  border: 1px solid rgba(255, 215, 90, 0.8);
-  border-radius: 18px;
+  width: min(680px, 90vw);
+  min-height: 210px;
+  padding: 38px 55px;
+
+  border: 2px solid #d6a83f;
+  border-radius: 10px;
+
   background:
-    radial-gradient(circle at 50% 0%, rgba(255, 225, 110, 0.25), transparent 55%),
-    linear-gradient(135deg, #17120a, #30230b 45%, #120f09);
-  color: #fff4bd;
+    linear-gradient(
+      135deg,
+      #5b4212 0%,
+      #d6a83f 12%,
+      #fff0a3 25%,
+      #b98218 45%,
+      #6b4b10 70%,
+      #e1b94e 88%,
+      #fff0a3 100%
+    );
+
+  color: #241804;
+
   box-shadow:
-    0 0 25px rgba(255, 205, 70, 0.25),
-    0 0 80px rgba(255, 190, 40, 0.12),
-    inset 0 0 35px rgba(255, 220, 100, 0.08);
+    0 0 0 4px rgba(255, 215, 90, 0.12),
+    0 0 25px rgba(255, 205, 70, 0.35),
+    0 0 70px rgba(255, 190, 40, 0.18),
+    inset 0 0 25px rgba(255, 255, 210, 0.5);
+
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
   overflow: hidden;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 38%,
+    97.5% 40%,
+    97.5% 43%,
+    100% 45%,
+    100% 55%,
+    97.5% 57%,
+    97.5% 60%,
+    100% 62%,
+    100% 100%,
+    0% 100%,
+    0% 62%,
+    2.5% 60%,
+    2.5% 57%,
+    0% 55%,
+    0% 45%,
+    2.5% 43%,
+    2.5% 40%,
+    0% 38%
+  );
 }
 
 .golden-ticket:hover {

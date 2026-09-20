@@ -850,8 +850,19 @@ pointer-events: auto;
   </footer>
 
 <script>
+
 function revealGoldenTicket() {
   const message = document.getElementById("golden-message");
+  const ticket = document.querySelector(".golden-ticket");
+  const wrap = document.querySelector(".golden-wrap");
+
+  ticket.classList.remove("awaken");
+  wrap.classList.remove("awaken");
+
+  void ticket.offsetWidth;
+
+  ticket.classList.add("awaken");
+  wrap.classList.add("awaken");
 
   message.classList.add("revealed");
 
@@ -867,8 +878,6 @@ function revealGoldenTicket() {
 }
 
 function revealGoldenInvitation() {
-  
-
   const golden = document.getElementById("golden");
 
   golden.style.display = "block";
@@ -878,9 +887,10 @@ function revealGoldenInvitation() {
     block: "center"
   });
 }
-
-
 </script>
+
+
+
 
 </body>
 </body>

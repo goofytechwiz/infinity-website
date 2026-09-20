@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Infinity Vision AI — Kaevoryn Studios</title>
+
+  <meta
+    name="description"
+    content="Infinity Vision AI — The Intelligence Beyond the Screen. A Kaevoryn Studios world."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(70, 40, 180, 0.28), transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(0, 180, 255, 0.14), transparent 30%),
+        #03030a;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(100,200,255,.5) 1px, transparent 1px);
+      background-size: 90px 90px, 150px 150px;
+      background-position: 20px 30px, 70px 100px;
+      opacity: .35;
+    }
+
+    nav {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid rgba(120, 170, 255, .15);
+      background: rgba(3, 3, 10, .65);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .back {
+      color: #b8c8ff;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+      min-height: calc(100vh - 75px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 5px;
+      color: #8fdcff;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 86px);
+      letter-spacing: 5px;
+      text-shadow:
+        0 0 15px rgba(0, 190, 255, .7),
+        0 0 40px rgba(100, 50, 255, .45);
+    }
+
+    .subtitle {
+      margin-top: 18px;
+      font-size: clamp(18px, 3vw, 28px);
+      color: #c7c9ff;
+    }
+
+    .description {
+      max-width: 650px;
+      margin: 20px auto 45px;
+      line-height: 1.8;
+      color: #aeb3ce;
+      font-size: 16px;
+    }
+
+    .core {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto 35px;
+    }
+
+    .core::before,
+    .core::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .core::before {
+      inset: 0;
+      border: 2px solid rgba(90, 210, 255, .65);
+      box-shadow:
+        0 0 25px rgba(0, 190, 255, .7),
+        0 0 70px rgba(100, 50, 255, .45);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .core::after {
+      inset: 25px;
+      border: 1px solid rgba(180, 130, 255, .7);
+      box-shadow: inset 0 0 35px rgba(70, 170, 255, .25);
+      animation: spin 12s linear infinite;
+    }
+
+    .core-inner {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #172d68, #070718 70%);
+      border: 2px solid rgba(130, 220, 255, .8);
+      box-shadow:
+        0 0 20px rgba(0, 210, 255, .8),
+        0 0 55px rgba(100, 50, 255, .55);
+      position: relative;
+      z-index: 2;
+    }
+
+    .core-inner span {
+      font-weight: 800;
+      letter-spacing: 4px;
+      font-size: 20px;
+    }
+
+    .core-label {
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: #8fdcff;
+    }
+
+    .status {
+      margin-top: 18px;
+      color: #a7a9c8;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .return {
+      margin-top: 40px;
+      padding: 13px 25px;
+      border: 1px solid rgba(120, 200, 255, .5);
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    .return:hover {
+      background: rgba(70, 160, 255, .12);
+      box-shadow: 0 0 25px rgba(0, 190, 255, .3);
+    }
+
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 25px;
+      color: #666b88;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(.96);
+        opacity: .65;
+      }
+
+      50% {
+        transform: scale(1.04);
+        opacity: 1;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 18px 5%;
+      }
+
+      .core {
+        width: 180px;
+        height: 180px;
+      }
+
+      .core-inner {
+        width: 85px;
+        height: 85px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stars"></div>
+
+  <nav>
+    <a class="logo" href="index.html">KAEVORYN</a>
+    <a class="back" href="index.html">← RETURN TO KAEVORYN</a>
+  </nav>
+
+  <main>
+
+    <div class="eyebrow">KAEVORYN STUDIOS • WORLD 01</div>
+
+    <h1>INFINITY VISION AI</h1>
+
+    <div class="subtitle">
+      The Intelligence Beyond the Screen.
+    </div>
+
+    <p class="description">
+      A world where imagination, intelligence, and creation become one.
+      <br>
+      Something new is awakening.
+    </p>
+
+    <div class="core">
+      <div class="core-inner">
+        <span>IVA</span>
+      </div>
+    </div>
+
+    <div class="core-label">
+      INFINITY VISION AI CORE
+    </div>
+
+    <div class="status">
+      CORE STATUS: AWAKENING
+    </div>
+
+    <a class="return" href="index.html">
+      RETURN TO KAEVORYN
+    </a>
+
+  </main>
+
+  <footer>
+    KAEVORYN STUDIOS • CREATE THE IMPOSSIBLE
+  </footer>
+
+</body>
+</html>

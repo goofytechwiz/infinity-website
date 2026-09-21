@@ -445,38 +445,43 @@ pointer-events: auto;
 
 .golden-ticket {
   position: relative;
-  width: min(720px, 92vw);
-  min-height: 220px;
-  padding: 42px 65px;
+  width: min(820px, 92vw);
+  min-height: 300px;
+  padding: 48px 70px;
 
   border: 3px solid #8c6415;
-  border-radius: 4px;
+  border-radius: 10px;
 
   background:
-    radial-gradient(
-      circle at 50% 45%,
-      rgba(255, 248, 190, 0.95),
-      rgba(238, 193, 65, 0.95) 35%,
-      rgba(166, 112, 18, 0.98) 72%,
-      rgba(91, 58, 7, 1) 100%
+    linear-gradient(
+      135deg,
+      rgba(91, 58, 7, 1) 0%,
+      rgba(166, 112, 18, 1) 18%,
+      rgba(255, 248, 190, 0.98) 42%,
+      rgba(238, 193, 65, 1) 58%,
+      rgba(166, 112, 18, 1) 82%,
+      rgba(76, 47, 5, 1) 100%
     );
 
   color: #3a2504;
 
   box-shadow:
-    0 0 0 3px rgba(255, 220, 100, 0.7),
-    0 0 0 8px rgba(112, 72, 8, 0.55),
-    0 8px 25px rgba(0, 0, 0, 0.45),
-    0 0 55px rgba(255, 204, 65, 0.35),
+    0 0 0 3px rgba(255, 220, 100, 0.8),
+    0 0 0 8px rgba(112, 72, 8, 0.6),
+    0 18px 35px rgba(0, 0, 0, 0.6),
+    0 35px 70px rgba(0, 0, 0, 0.45),
+    0 0 65px rgba(255, 204, 65, 0.4),
     inset 0 0 35px rgba(255, 248, 190, 0.55);
 
   cursor: pointer;
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 
   overflow: hidden;
+
+  transform: perspective(1100px) rotateX(3deg) rotateY(-4deg);
 
   clip-path: polygon(
     0 0,
@@ -536,35 +541,167 @@ pointer-events: auto;
 
 .golden-ticket-label {
   display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.35em;
+  position: relative;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.38em;
   margin-bottom: 18px;
-  color: #ffe58a;
+
+  color: #fff4b8;
+
+  text-shadow:
+    0 1px 0 #fffde8,
+    0 2px 3px rgba(92, 58, 6, 0.65),
+    0 0 12px rgba(255, 220, 100, 0.45);
+
+  text-transform: uppercase;
 }
 
 .golden-ticket strong {
   display: block;
-  font-size: clamp(1.6rem, 4vw, 2.7rem);
-  letter-spacing: 0.12em;
-  color: #fff1a8;
-  text-shadow: 0 0 18px rgba(255, 215, 90, 0.45);
-}
+  position: relative;
+  margin: 12px 0 10px;
 
-.golden-ticket span:last-child {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  line-height: 1.1;
+
+  color: #fff8c7;
+
+  text-shadow:
+    0 1px 0 #fffde8,
+    0 2px 0 #d6a62b,
+    0 4px 0 #8c6415,
+    0 7px 12px rgba(70, 42, 4, 0.55),
+    0 0 22px rgba(255, 225, 110, 0.55);
+
+  filter: drop-shadow(0 0 8px rgba(255, 215, 90, 0.35));
+}
+    .golden-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 72px;
+  margin: 22px auto 18px;
+
+  border: 2px solid #fff1a8;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fffde8 0%,
+      #f6d76a 28%,
+      #c08a1d 65%,
+      #6f4708 100%
+    );
+
+  color: #5a3805;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0;
+
+  text-shadow:
+    0 1px 0 #fff6b5,
+    0 3px 3px rgba(58, 37, 4, 0.55);
+
+  box-shadow:
+    0 2px 0 #7b5009,
+    0 6px 12px rgba(58, 37, 4, 0.5),
+    0 0 20px rgba(255, 220, 100, 0.45),
+    inset 0 2px 5px rgba(255, 255, 220, 0.65),
+    inset 0 -5px 8px rgba(90, 55, 5, 0.35);
+
+  transform: translateZ(25px);
+}
+    .golden-create {
+  display: block;
+  margin: 8px 0 18px;
+
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.28em;
+
+  color: #fff6b8;
+
+  text-shadow:
+    0 1px 0 #fffde8,
+    0 2px 0 #d6a62b,
+    0 4px 6px rgba(70, 42, 4, 0.55),
+    0 0 16px rgba(255, 220, 100, 0.5);
+}
+.golden-quote {
+  display: block;
+  margin: 18px auto;
+  padding: 14px 24px;
+
+  max-width: 600px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: #5a3805;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 248, 190, 0.75),
+      rgba(194, 139, 30, 0.55)
+    );
+
+  border: 1px solid rgba(255, 239, 157, 0.9);
+  border-radius: 6px;
+
+  box-shadow:
+    inset 0 2px 5px rgba(255, 255, 220, 0.55),
+    inset 0 -3px 6px rgba(90, 55, 5, 0.25),
+    0 3px 8px rgba(70, 42, 4, 0.35);
+}
+.golden-access-title {
   display: block;
   margin-top: 16px;
   font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.25em;
-  color: rgba(255, 240, 180, 0.75);
+  color: #fff3b0;
+
+  text-shadow:
+    0 1px 2px rgba(70, 42, 4, 0.6),
+    0 0 10px rgba(255, 220, 100, 0.4);
 }
 
-.golden-message {
-  max-width: 620px;
-  min-height: 80px;
-  padding: 22px;
-  opacity: 0.55;
-  color: rgba(255, 245, 200, 0.7);
-  transition: all 0.5s ease;
+.golden-access {
+  display: block;
+  margin-top: 18px;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.32em;
+
+  color: #fff8cf;
+
+  text-shadow:
+    0 1px 0 #fffde8,
+    0 2px 3px rgba(70, 42, 4, 0.65),
+    0 0 14px rgba(255, 220, 100, 0.45);
+}
+.golden-hidden {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: rgba(255, 241, 168, 0.55);
+  text-shadow:
+    0 1px 2px rgba(70, 42, 4, 0.5),
+    0 0 10px rgba(255, 220, 100, 0.25);
 }
 
 .golden-message.revealed {
@@ -588,8 +725,8 @@ pointer-events: auto;
 
 .golden-ticket.awaken {
   animation: goldenAwakening 1.2s ease;
+  transform-origin: center;
 }
-
 @keyframes goldenAwakening {
   0% {
     transform: scale(1);
@@ -861,6 +998,11 @@ pointer-events: auto;
       <span class="golden-ticket-label">KAEVORYN STUDIOS</span>
       <strong>GOLDEN INVITATION</strong>
       <span>ACCESS TO THE IMPOSSIBLE</span>
+            <span class="golden-emblem">K</span>
+      <span class="golden-create">CREATE THE IMPOSSIBLE</span>
+      <span class="golden-quote">Create the Impossible — starting with the person who dreamed it.</span>
+      <span class="golden-access">DREAMER ACCESS</span>
+      <span class="golden-hidden">WHAT WILL YOU DREAM INTO EXISTENCE?</span>
     </button>
 
     <div id="golden-message" class="golden-message" aria-live="polite">

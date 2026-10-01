@@ -1303,6 +1303,28 @@
     }
 
   </script>
+<script>
+fetch("content/site.json")
+  .then(response => response.json())
+  .then(data => {
 
+    if (data.home) {
+      document.querySelector(".hero-kicker").textContent = data.home.kicker;
+      document.querySelector(".hero h1").textContent = data.home.title;
+      document.querySelector(".hero h2").textContent = data.home.subtitle;
+      document.querySelector(".hero-text").textContent = data.home.description;
+      document.querySelector(".hero-question").textContent = data.home.question;
+    }
+
+    if (data.vision) {
+      document.querySelector("#vision .section-title span").textContent = data.vision.eyebrow;
+      document.querySelector("#vision h2").textContent = data.vision.title;
+      document.querySelector(".philosophy-main").textContent = data.vision.philosophy;
+      document.querySelector(".philosophy-sub").textContent = data.vision.description;
+    }
+
+  })
+  .catch(error => console.log("CMS loading error:", error));
+</script>
 </body>
 </html>

@@ -8,5 +8,10 @@
     "category": "SURVIVAL HORROR",
     "title": "Escape From The Nightmare Forge",
     "description": "Something is waiting inside the Forge. Find a way deeper."
+  },
+  {
+    "category": "MOTION",
+    "title": "Infinity Motion Studio",
+    "description": "Tools and technology for creating cinematic motion and experiences."
   }
 ]

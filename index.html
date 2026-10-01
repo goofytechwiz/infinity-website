@@ -461,79 +461,83 @@
       gap: 30px;
     }
 
-    .golden-ticket {
-      position: relative;
+   .golden-ticket {
+  position: relative;
 
-      width: min(820px, 92vw);
-      min-height: 300px;
+  width: min(820px, 92vw);
+  min-height: 300px;
 
-      padding: 48px 70px;
+  padding: 48px 70px;
 
-      border: 3px solid #8c6415;
-      border-radius: 10px;
+  border: 3px solid #8c6415;
+  border-radius: 10px;
 
-      background:
-        radial-gradient(
-          circle at 20% 15%,
-          rgba(255,255,230,.55) 0%,
-          rgba(255,255,230,0) 18%
-        ),
-        linear-gradient(
-          135deg,
-          rgba(78,48,5,1) 0%,
-          rgba(163,109,17,1) 16%,
-          rgba(255,248,190,.98) 40%,
-          rgba(238,193,65,1) 57%,
-          rgba(177,122,20,1) 80%,
-          rgba(67,40,4,1) 100%
-        );
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(255,255,230,.55) 0%,
+      rgba(255,255,230,0) 18%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(78,48,5,1) 0%,
+      rgba(163,109,17,1) 16%,
+      rgba(255,248,190,.98) 40%,
+      rgba(238,193,65,1) 57%,
+      rgba(177,122,20,1) 80%,
+      rgba(67,40,4,1) 100%
+    );
 
-      color: #3a2504;
+  color: #3a2504;
 
-      box-shadow:
-        0 0 0 3px rgba(255,220,100,.8),
-        0 0 0 8px rgba(112,72,8,.6),
-        0 18px 35px rgba(0,0,0,.6),
-        0 35px 70px rgba(0,0,0,.45),
-        0 0 65px rgba(255,204,65,.4),
-        inset 0 0 35px rgba(255,248,190,.55);
+  cursor: pointer;
 
-      cursor: pointer;
+  overflow: hidden;
 
-      transition:
-        transform .45s ease,
-        box-shadow .45s ease;
+  transform-origin: center center;
 
-      overflow: hidden;
+  transform:
+    perspective(1400px)
+    rotateX(5deg)
+    rotateY(-7deg)
+    translateZ(0)
+    scale(.96);
 
-      transform:
-        perspective(1100px)
-        rotateX(3deg)
-        rotateY(-4deg);
+  box-shadow:
+    0 0 0 3px rgba(255,220,100,.9),
+    0 0 0 8px rgba(112,72,8,.7),
+    0 22px 45px rgba(0,0,0,.72),
+    0 55px 110px rgba(0,0,0,.58),
+    0 0 85px rgba(255,204,65,.45),
+    inset 0 0 35px rgba(255,248,190,.55);
 
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 37%,
-        98% 39%,
-        98% 43%,
-        100% 45%,
-        100% 55%,
-        98% 57%,
-        98% 61%,
-        100% 63%,
-        100% 100%,
-        0 100%,
-        0 63%,
-        2% 61%,
-        2% 57%,
-        0 55%,
-        0 45%,
-        2% 43%,
-        2% 39%,
-        0 37%
-      );
-    }
+  transition:
+    transform .6s cubic-bezier(.2,.8,.2,1),
+    box-shadow .6s ease;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 37%,
+    98% 39%,
+    98% 43%,
+    100% 45%,
+    100% 55%,
+    98% 57%,
+    98% 61%,
+    100% 63%,
+    100% 100%,
+    0 100%,
+    0 63%,
+    2% 61%,
+    2% 57%,
+    0 55%,
+    0 45%,
+    2% 43%,
+    2% 39%,
+    0 37%
+  );
+}
 
     .golden-ticket:hover {
       transform:

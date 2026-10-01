@@ -466,6 +466,44 @@
 
   transform-style: preserve-3d;
 }
+    .golden-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 52%;
+
+  width: min(760px, 82vw);
+  height: 190px;
+
+  transform:
+    translate(-50%, -50%)
+    translateZ(-140px)
+    rotateX(72deg)
+    scale(.72);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(0,0,0,.82) 0%,
+      rgba(0,0,0,.55) 35%,
+      rgba(0,0,0,.18) 65%,
+      transparent 78%
+    );
+
+  filter: blur(22px);
+
+  opacity: .75;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.golden-ticket {
+  z-index: 2;
+}
    .golden-ticket {
   position: relative;
 

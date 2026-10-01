@@ -1,0 +1,36 @@
+{
+  "home": {
+    "kicker": "PRESENCE DETECTED",
+    "title": "KAEVORYN",
+    "subtitle": "IMAGINATION MADE POSSIBLE",
+    "description": "To envision what should be impossible — and create it anyway.",
+    "question": "What will you dream into existence?"
+  },
+  "vision": {
+    "eyebrow": "THE PHILOSOPHY",
+    "title": "Dream the Impossible.",
+    "philosophy": "Dream the impossible and turn it into the possible.",
+    "description": "Push your imagination beyond the limit. Dream the impossible. Bring it to life. The future begins with you."
+  },
+  "golden": {
+    "eyebrow": "A SECRET AWAITS",
+    "title": "The Golden Invitation.",
+    "description": "Somewhere within Kaevoryn, an invitation may be waiting for the dreamer who finds it.",
+    "label": "KAEVORYN STUDIOS",
+    "invitation": "GOLDEN INVITATION",
+    "access": "ACCESS TO THE IMPOSSIBLE",
+    "create": "CREATE THE IMPOSSIBLE",
+    "quote": "Create the Impossible — starting with the person who dreamed it.",
+    "dreamer": "DREAMER ACCESS",
+    "hidden": "WHAT WILL YOU DREAM INTO EXISTENCE?"
+  },
+  "contact": {
+    "eyebrow": "CONNECT",
+    "title": "The Journey Has Begun.",
+    "description": "Kaevoryn is only the beginning. The impossible is waiting to be created."
+  },
+  "footer": {
+    "title": "KAEVORYN STUDIOS",
+    "slogan": "CREATE THE IMPOSSIBLE"
+  }
+}
